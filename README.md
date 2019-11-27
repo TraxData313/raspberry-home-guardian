@@ -38,5 +38,6 @@ region=eu-west-1 <br></i>
 
 ### Notes:
 - port = 80
+- Directory where media is saved: /var/www/html/media/
 
 
