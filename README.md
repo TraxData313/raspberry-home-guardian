@@ -15,9 +15,15 @@
 - From raspberry configuration enable SSH, Pi camera, disable GUI with auto login to pi user
 - Install RPi-Cam-Web-Interface (https://elinux.org/RPi-Cam-Web-Interface#Basic_Installation - follow Basic Installation)
 
+### Used HW:
+- Raspberry PI
+- Raspberry camera
+
 
 ### Usage:
 
 
 ### Notes:
 - port = 80
+
+
