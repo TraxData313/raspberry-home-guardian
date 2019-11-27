@@ -14,6 +14,17 @@
 - From GUI internet settigns set up a static IPv4 address
 - From raspberry configuration enable SSH, Pi camera, disable GUI with auto login to pi user
 - Install RPi-Cam-Web-Interface (https://elinux.org/RPi-Cam-Web-Interface#Basic_Installation - follow Basic Installation)
+- To work with AWS resources install boto3, SSH to the raspberry and enter the commands:
+- - pip install boto3
+- - mkdir ~/.aws
+- - nano ~/.aws/credentials -> fill in your credentials:
+[default]
+aws_access_key_id = YOUR_KEY
+aws_secret_access_key = YOUR_SECRET
+- - nano ~/.aws/config -> fill in your region:
+[default]
+region=us-east-1
+
 
 ### Used HW:
 - Raspberry PI
