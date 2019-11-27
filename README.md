@@ -21,8 +21,8 @@ pip install boto3
 mkdir ~/.aws
 - - Next, set up credentials, enter commad <i>nano ~/.aws/credentials</i> -> and fill in your credentials: <br><i>
 [default] <br>
-aws_access_key_id = YOUR_KEY <br>
-aws_secret_access_key = YOUR_SECRET <br></i>
+aws_access_key_id = <b>YOUR_KEY</b> <br>
+aws_secret_access_key = <b>YOUR_SECRET</b> <br></i>
 - - Then, set up your region by command <i>nano ~/.aws/config</i>, replace the region if you will use another: <br>
 <i>[default] <br>
 region=eu-west-1 <br></i>
