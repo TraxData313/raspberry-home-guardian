@@ -19,15 +19,13 @@
 pip install boto3
 - - Create the AWS hidden directory:
 mkdir ~/.aws
-- - Next, set up credentials (in e.g. ~/.aws/credentials): <br>
-nano ~/.aws/credentials -> and fill in your credentials: <br>
+- - Next, set up credentials, enter commad <i>nano ~/.aws/credentials</i> -> and fill in your credentials: <br><i>
 [default] <br>
 aws_access_key_id = YOUR_KEY <br>
-aws_secret_access_key = YOUR_SECRET <br>
-- - Then, set up a default region (in e.g. ~/.aws/config): <br>
-nano ~/.aws/config -> fill in your region (replace us-east-1 with yours): <br>
-[default] <br>
-region=us-east-1 <br>
+aws_secret_access_key = YOUR_SECRET <br></i>
+- - Then, set up your region by command <i>nano ~/.aws/config</i>, replace the region if you will use another: <br>
+<i>[default] <br>
+region=eu-west-1 <br></i>
 
 
 ### Used HW:
