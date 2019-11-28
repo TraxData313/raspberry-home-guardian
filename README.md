@@ -2,7 +2,7 @@
 
 ### Roadmap:
 - The RPi-Cam-Web-Interface will create a new video, when motion is detected
-- Build a python script that detects the new video and pushes it in an AWS S3 bucket
+- Build a python script that detects the new video, pushes it in an AWS S3 bucket and plays some alarm
 - When new video arrives in S3, create an SNS that will notify the user via email/SMS
 - Build a buton, light and beeper in order:
 - - Use the button to start/stop the guardian, instead of using the GUI
