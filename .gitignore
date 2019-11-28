@@ -1,5 +1,6 @@
 # Ignore personal settings:
 settings.txt
+notes.txt
 
 # Ignore the media:
 ./media/*
