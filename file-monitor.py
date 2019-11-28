@@ -81,10 +81,8 @@ while True:
             print("Removing the file from ./media...")
             os.remove(file)
             print("Done!")
-            
-            x = 2 - 'aide leeeeeee opaaa'
         except Exception as e:
-            print("Failed!")
+            print("Failed due to:")
             print(e)
         
     time.sleep(1)
