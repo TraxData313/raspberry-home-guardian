@@ -26,6 +26,8 @@ aws_secret_access_key = <b>YOUR_SECRET</b> <br></i>
 - - Then, set up your region by command <i>nano ~/.aws/config</i>, replace the region if you will use another: <br>
 <i>[default] <br>
 region=eu-west-1 <br></i>
+- Create an S3 bucket in AWS and set it up to receive email when new file gets created
+- - Follow the steps here: https://www.youtube.com/watch?v=EGyuzMbXD0Y
 
 
 ### Used HW:
