@@ -1,9 +1,9 @@
 # raspberry-home-guardian - in progress...
 
 ### Roadmap:
-- The RPi-Cam-Web-Interface will create a new video, when motion is detected
-- Build a python script that detects the new video, pushes it in an AWS S3 bucket and plays some alarm
-- When new video arrives in S3, create an SNS that will notify the user via email/SMS
+- The Raspberry will create new video/pictures, when motion is detected
+- A python script will detects the new video/pictures, and will upload them to an AWS S3 bucket
+- When new video arrives in S3, an SNS will notify the user via email/SMS
 - Build a buton, light and beeper in order:
 - - Use the button to start/stop the guardian, instead of using the GUI
 - - Sound an alarm when intrusion is detected
