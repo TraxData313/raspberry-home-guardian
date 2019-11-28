@@ -35,7 +35,7 @@ while True:
     print()
     print("Looking for files in ./media...")
     del files
-    files = os.listdir(".\media")
+    files = os.listdir("./media")
     for file in files:
         print()
         print("Found file:", file)
