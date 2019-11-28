@@ -73,16 +73,16 @@ while True:
         # - Upload the file to the S3 bucket:
         print()
         print("Uploading the file to S3...")
-
-        upload_file(file_name=file, bucket=bucket_name)
-        print("Done!")
-        # - Remove the file:
-        print()
-        print("Removing the file from ./media...")
-        os.remove(file)
-        print("Done!")
-        #except:
-        #    print("Failed!")
+        try:
+            upload_file(file_name=file, bucket=bucket_name)
+            print("Done!")
+            # - Remove the file:
+            print()
+            print("Removing the file from ./media...")
+            os.remove(file)
+            print("Done!")
+        except:
+            print("Failed!")
         
     time.sleep(1)
 
