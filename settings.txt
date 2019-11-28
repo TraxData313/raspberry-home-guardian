@@ -1,3 +1,0 @@
-Bucket name:
-site-for-raspberry
-
