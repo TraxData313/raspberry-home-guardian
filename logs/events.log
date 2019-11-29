@@ -1,0 +1,6 @@
+
+2019-11-29 12:20:32 test_errorlog.py: opaopa
+2019-11-29 12:21:46 test_errorlog.py: opaopa
+2019-11-29 12:24:20 [EVENT] test_errorlog.py: opaopa
+2019-11-29 12:25:17 test_errorlog.py[EVENT]: opaopa
+2019-11-29 12:25:36 test_errorlog.py [EVENT]: opaopa
