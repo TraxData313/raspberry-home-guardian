@@ -15,7 +15,10 @@ else:
 print()
 print()
 print("Setting up bucket name...")
-bucket_name = raw_input("- Please enter the S3 bucket name: ")
+try:
+    bucket_name = raw_input("- Please enter the S3 bucket name: ")
+except:
+    bucket_name = input("- Please enter the S3 bucket name: ")
 saveFile = open('./settings.txt', 'w')
 saveFile.write('Bucket name:')
 saveFile.write('\n')
