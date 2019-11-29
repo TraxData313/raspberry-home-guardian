@@ -47,9 +47,9 @@ def log_error(reporting_program_name, error_message):
     appendFile.write('\n')
     appendFile.write(st)
     appendFile.write(' ')
-    appendFile.write(reporting_program_name)
+    appendFile.write(str(reporting_program_name))
     appendFile.write(' [ERROR]: ')
-    appendFile.write(error_message)
+    appendFile.write(str(error_message))
     appendFile.close()
 
 
@@ -75,7 +75,7 @@ def log_event(reporting_program_name, event_message):
     appendFile.write('\n')
     appendFile.write(st)
     appendFile.write(' ')
-    appendFile.write(reporting_program_name)
+    appendFile.write(str(reporting_program_name))
     appendFile.write(' [EVENT]: ')
-    appendFile.write(event_message)
+    appendFile.write(str(event_message))
     appendFile.close()
