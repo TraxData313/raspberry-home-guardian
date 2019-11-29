@@ -44,12 +44,12 @@ def log_error(reporting_program_name, error_message):
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
     # - Append an error:
     appendFile = open('logs/error.log', 'a')
-    appendFile.write('\n')
     appendFile.write(st)
     appendFile.write(' ')
     appendFile.write(str(reporting_program_name))
     appendFile.write(' [ERROR]: ')
     appendFile.write(str(error_message))
+    appendFile.write('\n')
     appendFile.close()
 
 
@@ -72,10 +72,10 @@ def log_event(reporting_program_name, event_message):
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
     # - Append an event:
     appendFile = open('logs/events.log', 'a')
-    appendFile.write('\n')
     appendFile.write(st)
     appendFile.write(' ')
     appendFile.write(str(reporting_program_name))
     appendFile.write(' [EVENT]: ')
     appendFile.write(str(event_message))
+    appendFile.write('\n')
     appendFile.close()
