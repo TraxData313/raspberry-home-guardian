@@ -54,7 +54,7 @@ def log_error(reporting_program_name: str, error_message: str):
 
 
 # - Function that logs error messages:
-def log_event(reporting_program_name: str, event_message: str):
+def log_event(reporting_program_name, event_message):
     """Adds entry in ./logs/event.log,
 
     where the reporting program = reporting_program_name
