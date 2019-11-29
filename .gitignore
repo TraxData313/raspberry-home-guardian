@@ -2,6 +2,7 @@
 settings.txt
 notes.txt
 test_*
+*.pyc
 
 # Ignore the media:
 ./media/*
@@ -10,4 +11,4 @@ test_*
 ./tempFiles
 
 # Ignore the logs:
-./logs/*
+./logs/*rmdi
