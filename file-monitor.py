@@ -67,17 +67,17 @@ while True:
         print()
         print("Found file:", file)
         # - Rename the file (add the path to it):
-        file =  "./media/" + file
+        file =  "media/" + file
         
         # - Upload the file to the S3 bucket:
         print()
         print("Uploading the file to S3 bucket:", bucket_name)
         try:
-            print(upload_file(file_name=file, bucket=bucket_name))
+            upload_file(file_name=file, bucket=bucket_name)
             print("Done!")
             # - Remove the file:
             print()
-            print("Removing the file from ./media...")
+            print("Removing the file from media...")
             os.remove(file)
             print("Done!")
         except Exception as e:
