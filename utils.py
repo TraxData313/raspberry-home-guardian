@@ -3,7 +3,7 @@ import boto3
 from botocore.exceptions import ClientError
 
 
-# - defining the upoad file func:
+# - Function that upoads files to S3:
 def upload_file(file_name, bucket, object_name=None):
     """Upload a file to an S3 bucket
     :param file_name: File to upload
@@ -24,3 +24,10 @@ def upload_file(file_name, bucket, object_name=None):
         logging.error(e)
         return False
     return True
+
+
+# - Function that logs error messages:
+def log_error(program, message):
+    print("Loggind error...")
+
+    print("- Done!")

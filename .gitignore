@@ -1,6 +1,7 @@
 # Ignore personal settings:
 settings.txt
 notes.txt
+test_*
 
 # Ignore the media:
 ./media/*
