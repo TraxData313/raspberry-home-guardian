@@ -11,4 +11,4 @@ test_*
 ./tempFiles
 
 # Ignore the logs:
-logs
+./logs/*
