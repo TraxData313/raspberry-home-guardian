@@ -43,7 +43,8 @@ while True:
         # - Rename the file (add the path to it):
         file =  "media/" + file
         # - Upload the file to the S3 bucket:
-        print("Found file", file, ". Uploading...")
+        print(" ")
+        print("file_monitor.py: Found file", file, ". Uploading...")
         try:
             upload_file(file_name=file, bucket=bucket_name)
             print("- uploaded!")
