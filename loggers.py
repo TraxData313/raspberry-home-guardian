@@ -51,6 +51,15 @@ def log_error(reporting_program_name, error_message):
     appendFile.write(str(error_message))
     appendFile.write('\n')
     appendFile.close()
+    # - Append an event:
+    appendFile = open('logs/events.log', 'a')
+    appendFile.write(st)
+    appendFile.write(' ')
+    appendFile.write(str(reporting_program_name))
+    appendFile.write(' [EVENT]: ')
+    appendFile.write(str(error_message))
+    appendFile.write('\n')
+    appendFile.close()
 
 
 # - Function that logs error messages:
