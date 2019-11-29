@@ -26,7 +26,7 @@ USAGE with example:
 
 
 # - Function that logs error messages:
-def log_error(reporting_program_name: str, error_message: str):
+def log_error(reporting_program_name, error_message):
     """Adds entry in ./logs/error.log,
 
     where the reporting program = reporting_program_name
