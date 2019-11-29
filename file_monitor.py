@@ -44,7 +44,8 @@ while True:
         file =  "media/" + file
         # - Upload the file to the S3 bucket:
         print(" ")
-        print("file_monitor.py: Found file", file, ". Uploading...")
+        temp_str = "file_monitor.py: Found file", file, ". Uploading..."
+        print(temp_str)
         try:
             upload_file(file_name=file, bucket=bucket_name)
             print("- uploaded!")
