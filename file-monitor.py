@@ -71,7 +71,7 @@ while True:
         
         # - Upload the file to the S3 bucket:
         print()
-        print("Uploading the file to S3...")
+        print("Uploading the file to S3 bucket:", bucket_name)
         try:
             upload_file(file_name=file, bucket=bucket_name)
             print("Done!")
