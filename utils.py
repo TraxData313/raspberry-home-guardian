@@ -1,33 +1,39 @@
 import logging
-import boto3
-from botocore.exceptions import ClientError
-
-
-# - Function that upoads files to S3:
-def upload_file(file_name, bucket, object_name=None):
-    """Upload a file to an S3 bucket
-    :param file_name: File to upload
-    :param bucket: Bucket to upload to
-    :param object_name: S3 object name. If not specified then file_name is used
-    :return: True if file was uploaded, else False
-    """
-
-    # If S3 object_name was not specified, use file_name
-    if object_name is None:
-        object_name = file_name
-
-    # Upload the file
-    s3_client = boto3.client('s3')
-    try:
-        response = s3_client.upload_file(file_name, bucket, object_name)
-    except ClientError as e:
-        logging.error(e)
-        return False
-    return True
+import time, datetime, os
 
 
 # - Function that logs error messages:
 def log_error(program, message):
+    """Creates an error in ./logs/error.log
+    """
+    print()
     print("Loggind error...")
 
+    # - Create log dir if it doesn't exist:
+    if not os.path.exists('logs'):
+        print('- No log directory, creating...')
+        os.mkdir('./logs');
+        print("-- Done!")
+    else:
+        pass
+
+
+    # - Get current time:
+    ts = time.time()
+    st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+
+    # - Append an error:
+    appendFile = open('logs/error.log', 'a')
+    appendFile.write('\n')
+    appendFile.write(st)
+    appendFile.write(' ')
+    appendFile.write(program)
+    appendFile.write(': ')
+    appendFile.write(message)
+
+
+    appendFile.close()
+
+
     print("- Done!")
+    print()

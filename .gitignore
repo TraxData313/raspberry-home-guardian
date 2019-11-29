@@ -8,3 +8,6 @@ test_*
 
 # Ignore temp files:
 ./tempFiles
+
+# Ignore the logs:
+./logs
