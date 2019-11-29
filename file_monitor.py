@@ -43,13 +43,17 @@ while True:
         # - Rename the file (add the path to it):
         file =  "media/" + file
         # - Upload the file to the S3 bucket:
+        print("Found file", file, ". Uploading...")
         try:
             upload_file(file_name=file, bucket=bucket_name)
+            print("- uploaded!")
             # - Remove the file:
             os.remove(file)
+            print("- removed!")
             # - Write to the log:
             event_message = 'Detected, uploaded and removed file ' + file
             log_event(reporting_program_name, event_message)
         except Exception as error_message:
             log_error(reporting_program_name, error_message)
+            print("- failed. Check the error.log")
     time.sleep(1)
