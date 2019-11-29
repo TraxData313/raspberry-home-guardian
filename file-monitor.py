@@ -1,5 +1,6 @@
 import os
 import time
+import utils
 
     
 
@@ -25,7 +26,6 @@ print("S3 bucket name is", bucket_name)
 
 
 
-
 while True:
     print()
     print()
@@ -46,7 +46,7 @@ while True:
         print()
         print("Uploading the file to S3 bucket:", bucket_name)
         try:
-            upload_file(file_name=file, bucket=bucket_name)
+            utils.upload_file(file_name=file, bucket=bucket_name)
             print("Done!")
             # - Remove the file:
             print()
