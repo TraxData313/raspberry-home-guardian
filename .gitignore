@@ -12,3 +12,6 @@ test_*
 
 # Ignore the logs:
 ./logs/*
+
+# More:
+__pycache__
