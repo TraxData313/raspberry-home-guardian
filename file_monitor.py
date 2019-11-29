@@ -78,7 +78,7 @@ while True:
         print("Uploading the file to S3 bucket:", bucket_name)
         try:
             upload_file(file_name=file, bucket=bucket_name)
-            event_message = 'Detected and uploaded file' + file
+            event_message = 'Detected and uploaded file ' + file
             log_event(reporting_program_name, event_message)
             print("Done!")
             # - Remove the file:
