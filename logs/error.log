@@ -1,10 +1,4 @@
-
-2019-11-29 11:11:57 - test_errorlog.py: opaopa
-2019-11-29 11:13:31 test_errorlog.py: opaopa
-2019-11-29 12:17:25 
-2019-11-29 12:18:12 test_errorlog.py: opaopa
-2019-11-29 12:20:32 test_errorlog.py: opaopa
-2019-11-29 12:21:46 test_errorlog.py: opaopa
-2019-11-29 12:24:20 [ERROR] test_errorlog.py: opaopa
-2019-11-29 12:25:17 test_errorlog.py[ERROR]: opaopa
 2019-11-29 12:25:36 test_errorlog.py [ERROR]: opaopa
+2019-11-29 12:36:00 test_errorlog.py [ERROR]: This is a sample error. Please check!
+2019-11-29 12:36:01 test_errorlog.py [ERROR]: This is a sample error. Please check!
+2019-11-29 12:36:02 test_errorlog.py [ERROR]: This is a sample error. Please check!
