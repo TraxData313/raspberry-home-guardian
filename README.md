@@ -31,7 +31,7 @@ region=eu-west-1 <br></i>
 
 
 ### Used HW:
-- Raspberry PI
+- Raspberry PI 3 Model B
 - Raspberry camera
 
 
