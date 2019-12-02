@@ -35,7 +35,7 @@ def take_video(video_lenght=5):
     try:
         camera = PiCamera()
         camera.start_preview()
-        file_name = './media/video_{}h_{}s.h264'.format(video_lenght, st)
+        file_name = './media/video_{}h_{}s.h264'.format(st, video_lenght)
         camera.start_recording(file_name)
         time.sleep(video_lenght)
         camera.stop_recording()
