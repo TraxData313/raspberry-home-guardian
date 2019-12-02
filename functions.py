@@ -22,7 +22,7 @@ def take_video(video_lenght=5):
     reporting_program_name = 'functions.take_video'
     # - Get the current time:
     ts = time.time()
-    st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+    st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d_%H:%M:%S')
     # - Record the video:
     camera = PiCamera()
     camera.start_preview()
