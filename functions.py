@@ -76,10 +76,6 @@ def check_upload_files():
     bucket_name = open('settings.txt', 'r').readlines()
     bucket_name = str(bucket_name[1])
     bucket_name = bucket_name[:-1]
-
-    # - Log starting program event:
-    event_message = 'Starting file detection'
-    log_event(reporting_program_name, event_message)
     
     # - Check for files:
     files = os.listdir("./media")
