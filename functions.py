@@ -31,5 +31,5 @@ def take_video(video_lenght=5):
     camera.stop_recording()
     camera.stop_preview()
     # - Log the event:
-    event_message = 'Created video ./media/video.{}.{}.h256'.format(video_lenght, st)'
+    event_message = 'Created video ./media/video.{}.{}.h256'.format(video_lenght, st)
     loggers.log_event(reporting_program_name, event_message)
