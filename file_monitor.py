@@ -1,9 +1,8 @@
 import os
-import time
 import boto3
 from botocore.exceptions import ClientError
-import time
 from loggers import log_event, log_error 
+import time
 
 
 # - Function that upoads files to S3:
