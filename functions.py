@@ -27,13 +27,15 @@ def take_video(video_lenght=5):
     try:
         camera = PiCamera()
         camera.start_preview()
-        file_name = './media/video_{}s_{}h.h256'.format(video_lenght, st)
+        file_name = './media/video_{}s_{}h.h264'.format(video_lenght, st)
         camera.start_recording(file_name)
         time.sleep(video_lenght)
         camera.stop_recording()
         camera.stop_preview()
+        # - Log event:
+        event_message = 'Created video {}'.format(file_name)
+        loggers.log_event(reporting_program_name, event_message)
     except Exception as error_message:
+        # - Log error:
         loggers.log_error(reporting_program_name, error_message)
-    # - Log the event:
-    event_message = 'Created video ./media/video.{}.{}.h256'.format(video_lenght, st)
-    loggers.log_event(reporting_program_name, event_message)
+
