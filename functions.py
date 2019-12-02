@@ -24,12 +24,15 @@ def take_video(video_lenght=5):
     ts = time.time()
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d_%H:%M:%S')
     # - Record the video:
-    camera = PiCamera()
-    camera.start_preview()
-    camera.start_recording('./media/video.{}.{}.h256'.format(video_lenght, st))
-    time.sleep(video_lenght)
-    camera.stop_recording()
-    camera.stop_preview()
+    try:
+        camera = PiCamera()
+        camera.start_preview()
+        camera.start_recording('./media/video.{}.{}.h256'.format(video_lenght, st))
+        time.sleep(video_lenght)
+        camera.stop_recording()
+        camera.stop_preview()
+    except Exception as error_message:
+        loggers.log_error(reporting_program_name, error_message)
     # - Log the event:
     event_message = 'Created video ./media/video.{}.{}.h256'.format(video_lenght, st)
     loggers.log_event(reporting_program_name, event_message)
