@@ -34,6 +34,7 @@ def take_video(video_lenght=5):
     # - Record the video:
     try:
         camera = PiCamera()
+        camera.resolution = (1024, 768)
         camera.start_preview()
         file_name = './media/video_{}h_{}s.h264'.format(st, video_lenght)
         camera.start_recording(file_name)
