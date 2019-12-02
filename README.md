@@ -13,7 +13,6 @@
 - Install raspbian on the raspberry (https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 - From GUI internet settigns set up a static IPv4 address
 - From raspberry configuration enable SSH, Pi camera, disable GUI with auto login to pi user
-- Install RPi-Cam-Web-Interface (https://elinux.org/RPi-Cam-Web-Interface#Basic_Installation - follow Basic Installation)
 - To work with AWS resources install boto3, SSH to the raspberry and:
 - - Install the library with:
 pip install boto3
@@ -33,6 +32,9 @@ region=eu-west-1 <br></i>
 ### Used HW:
 - Raspberry PI 3 Model B
 - Raspberry camera
+- PIR motion sensor
+- LEDs
+- jumper cables
 
 
 ### Usage:
@@ -41,5 +43,6 @@ region=eu-west-1 <br></i>
 ### Notes:
 - port = 80
 - Directory where media is saved: /var/www/html/media/
+- RPi-Cam-Web-Interface (https://elinux.org/RPi-Cam-Web-Interface#Basic_Installation)
 
 
