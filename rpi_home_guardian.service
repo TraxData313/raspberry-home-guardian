@@ -1,0 +1,12 @@
+[Unit]
+Description=Runs the rpi_home_guardian.sh script
+After=network.target
+
+[Service]
+ExecStart=/home/pi/raspberry-home-guardian-with-aws/rpi_home_guardian.sh
+Restart=always
+WorkingDirectory=/home/pi/raspberry-home-guardian-with-aws
+User=pi
+
+[Install]
+WantedBy=multi-user.target
