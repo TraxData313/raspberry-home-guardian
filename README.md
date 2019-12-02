@@ -13,19 +13,19 @@
 1. From GUI internet settigns set up a static IPv4 address
 1. From raspberry configuration enable SSH, Pi camera, disable GUI with auto login to pi user
 1. To work with AWS resources install boto3, SSH to the raspberry and:
-  1. Install the library with:
+   1. Install the library with:
 pip install boto3
-  1. Create the AWS hidden directory:
+   1. Create the AWS hidden directory:
 mkdir ~/.aws
-  1. Next, set up credentials, enter commad <i>nano ~/.aws/credentials</i> -> and fill in your credentials: <br><i>
+   1. Next, set up credentials, enter commad <i>nano ~/.aws/credentials</i> -> and fill in your credentials: <br><i>
 [default] <br>
 aws_access_key_id = <b>YOUR_KEY</b> <br>
 aws_secret_access_key = <b>YOUR_SECRET</b> <br></i>
-  1. Then, set up your region by command <i>nano ~/.aws/config</i>, replace the region if you will use another: <br>
+   1. Then, set up your region by command <i>nano ~/.aws/config</i>, replace the region if you will use another: <br>
 <i>[default] <br>
 region=eu-west-1 <br></i>
 1. Create an S3 bucket in AWS and set it up to receive email when new file gets created
-  1. Follow the steps here: https://www.youtube.com/watch?v=EGyuzMbXD0Y
+   1. Follow the steps here: https://www.youtube.com/watch?v=EGyuzMbXD0Y
 
 
 ### Used HW:
