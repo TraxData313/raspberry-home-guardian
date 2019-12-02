@@ -41,6 +41,7 @@ def take_video(video_lenght=5):
         time.sleep(video_lenght)
         camera.stop_recording()
         camera.stop_preview()
+        camera.close()
         # - Log event:
         event_message = 'Created video {}'.format(file_name)
         log_event(reporting_program_name, event_message)
