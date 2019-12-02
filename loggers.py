@@ -13,8 +13,8 @@ USAGE with example:
 # error_message = "your error here" or event_message = "your event here"
 
   and use the loggers as follows:
-# log_error(reporting_program_name, error_message)
-# log_event(reporting_program_name, event_message)
+# loggers.log_error(reporting_program_name, error_message)
+# loggers.log_event(reporting_program_name, event_message)
 
 - The messages get created in:
 ./logs/error.log and events.log
@@ -56,7 +56,7 @@ def log_error(reporting_program_name, error_message):
     appendFile.write(st)
     appendFile.write(' ')
     appendFile.write(str(reporting_program_name))
-    appendFile.write(' [EVENT]: ')
+    appendFile.write(' [ERROR]: ')
     appendFile.write(str(error_message))
     appendFile.write('\n')
     appendFile.close()
