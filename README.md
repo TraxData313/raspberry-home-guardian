@@ -26,7 +26,10 @@ aws_secret_access_key = <b>YOUR_SECRET</b> <br></i>
 region=eu-west-1 <br></i>
 1. Create an S3 bucket in AWS and set it up to receive email when new file gets created
    1. Follow the steps here: https://www.youtube.com/watch?v=EGyuzMbXD0Y
-1. SSH to the raspberry and clone this repo (enter command): `git pull https://github.com/TraxData313/raspberry-home-guardian-with-aws.git`
+1. SSH to the raspberry set up the service: 
+   1. Clone the repo: `git pull https://github.com/TraxData313/raspberry-home-guardian-with-aws.git`
+   1. Make the installer executable: `chmod +x ./installer.sh`
+   1. Run the installer: `sudo ./installer.sh`
    
 
 
