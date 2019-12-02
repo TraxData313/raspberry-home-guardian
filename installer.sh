@@ -14,6 +14,11 @@ echo "Start the configure.py script to set up the S3 bucket and initialize the .
 python configure.py
 echo "- Done!"
 
+# - Make the rpi_home_guardian.sh executable:
+echo "Making the rpi_home_guardian.sh executable..."
+chmod +x rpi_home_guardian.sh
+echo "- Done!"
+
 # - Place the rpi_home_guardian.service in /etc/systemd/system:
 echo "Place the rpi_home_guardian.service in /etc/systemd/system..."
 mv ./rpi_home_guardian.service /etc/systemd/system/rpi_home_guardian.service
