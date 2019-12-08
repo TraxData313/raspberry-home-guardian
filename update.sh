@@ -6,7 +6,7 @@
 # sudo ./update.sh
 
 # Update to the lattest version:
-echo "Fetching latest update and updateing to them..."
+echo "Fetching latest update and updating to them..."
 git fetch --all
 git reset --hard origin/master
 echo "- Done!"
