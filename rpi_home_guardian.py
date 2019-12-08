@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(15, GPIO.OUT) # LED
 
 # - Arming time (sec)
-arming_time = 30
+arming_time = 300
 
 # - Log starting event:
 reporting_program_name = 'rpi_home_guardian.py'
