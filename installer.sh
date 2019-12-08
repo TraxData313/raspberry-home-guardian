@@ -24,7 +24,7 @@ echo "- Done!"
 
 # - Place the rpi_home_guardian.service in /etc/systemd/system:
 echo "- Copying the rpi_home_guardian.service in /etc/systemd/system..."
-cp ./rpi_home_guardian.service /etc/systemd/system/
+cp ./rpi_home_guardian.serv /etc/systemd/system/rpi_home_guardian.service
 echo "- Done!"
 
 # - Make the service start at boot and start it now:
