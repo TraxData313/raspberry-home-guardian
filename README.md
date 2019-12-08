@@ -48,5 +48,6 @@ region=eu-west-1 <br></i>
 - port = 80
 - Directory where media is saved: /var/www/html/media/
 - RPi-Cam-Web-Interface (https://elinux.org/RPi-Cam-Web-Interface#Basic_Installation)
+- Video format is h264. VLC player supports it.
 
 
