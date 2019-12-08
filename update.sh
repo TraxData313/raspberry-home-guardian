@@ -6,8 +6,11 @@
 # sudo ./update.sh
 
 # Update to the lattest version:
+echo "Fetching latest update and updateing to them..."
 git fetch --all
 git reset --hard origin/master
+echo "- Done!"
+echo " "
 
 # - Make the sh files executable:
 echo "Making the rpi_home_guardian.sh executable..."
