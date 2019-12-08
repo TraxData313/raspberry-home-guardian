@@ -23,8 +23,8 @@ chmod +x rpi_home_guardian.sh
 echo "- Done!"
 
 # - Place the rpi_home_guardian.service in /etc/systemd/system:
-echo "Place the rpi_home_guardian.service in /etc/systemd/system..."
-mv ./rpi_home_guardian.service /etc/systemd/system/rpi_home_guardian.service
+echo "- Copying the rpi_home_guardian.service in /etc/systemd/system..."
+cp ./rpi_home_guardian.service /etc/systemd/system/
 echo "- Done!"
 
 # - Make the service start at boot and start it now:
