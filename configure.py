@@ -1,4 +1,5 @@
 import os
+import functions
 print()
 print()
 print()
@@ -66,8 +67,8 @@ def change_aws_settings():
     saveFile.write('\n')
     saveFile.write(str(aws_secret_access_key_formated))
     saveFile.close()
-    print("- aws_access_key_id {}".format(aws_access_key_id))
-    print("- aws_secret_access_key {}".format(aws_secret_access_key))
+    print("- aws_access_key_id     is set to {}".format(aws_access_key_id))
+    print("- aws_secret_access_key is set to {}".format(aws_secret_access_key))
     
     
     
