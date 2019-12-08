@@ -73,3 +73,9 @@ while True:
         functions.flash_led(flashes=3)
         # - Delay:
         time.sleep(0.7)
+        
+    # - STATE is corrupted error:
+    else:
+        reporting_program_name = 'rpi_home_guardian.py'
+        error_message = 'State is CORRUPTED. Not equil to 1,2 or 3, or the file is illformated. Delete {} and rerun the program!'.format(state_file)
+        log_error(reporting_program_name, error_message)
