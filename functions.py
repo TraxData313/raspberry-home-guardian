@@ -24,6 +24,7 @@ def flash_led(flashes=3):
         GPIO.output(15,GPIO.HIGH)
         time.sleep(0.1)
         GPIO.output(15,GPIO.LOW)
+        time.sleep(0.1)
     time.sleep(0.5)
 
 
