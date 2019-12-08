@@ -33,7 +33,7 @@ def confirm_button_press():
     # - if still pressed -> transition to state 2 (arming)
     GPIO.output(15,GPIO.HIGH) # Turn LED on
     time.sleep(3)
-    GPIO.output(15,GPIO.LOW)
+    GPIO.output(15,GPIO.LOW) # Turn LED off
     button_state = GPIO.input(13)
     if button_state == True:
         # - LED flassing:
@@ -41,7 +41,7 @@ def confirm_button_press():
         # - confirm the press:
         confirm_press_bool = True
     else:
-        GPIO.output(15,GPIO.LOW) # Turn LED off
+        pass 
     return confirm_press_bool
 
 
