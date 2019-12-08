@@ -33,7 +33,7 @@ chmod +x update.sh
 echo "- Done!"
 echo "Making the start.sh and stop.sh executable..."
 chmod +x start.sh
-chmod +x start.sh
+chmod +x stop.sh
 echo "- Done!"
 echo " "
 
