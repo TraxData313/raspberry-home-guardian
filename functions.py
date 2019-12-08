@@ -19,7 +19,7 @@ import boto3
 from botocore.exceptions import ClientError
 
 
-def flash_led(flashes=3)
+def flash_led(flashes=3):
     for i in range(flashes):
         GPIO.output(15,GPIO.HIGH)
         time.sleep(0.1)
