@@ -35,4 +35,5 @@ systemctl start rpi_home_guardian.service
 echo "- Done!"
 
 # - Final message:
-echo "-- All done!"
+echo "-- All done! Raspberry home guardian is running."
+echo "-- Change states by keeping the button pressed for 3 seconds"
