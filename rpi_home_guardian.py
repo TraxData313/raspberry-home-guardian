@@ -56,6 +56,9 @@ while True:
     elif arm_state == 2:
         # - Delay arming_time seconds than go to state armed:
         for i in range(arming_time):
+            # - Check if the button is pressed to abort the arming:
+            arm_state = functions.read_button_and_change_state(arm_state, state_file)
+            # - Flash the LED:
             functions.flash_led(flashes=2)
             time.sleep(0.8)
         # - Record UNAMED -> ARMING in the event log:

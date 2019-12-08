@@ -71,7 +71,20 @@ def read_button_and_change_state(arm_state, state_file):
         time.sleep(0.5)
         
     elif arm_state == 2:
-        pass # not used
+        button_state = GPIO.input(13) 
+        if button_state == True:
+            if confirm_button_press() == True:
+                arm_state = 1
+                # - Record ARMING -> UNARMED in the event log:
+                reporting_program_name = 'rpi_home_guardian.py'
+                event_message = 'Button pressed. Arming aborted. DISARMED.'
+                log_event(reporting_program_name, event_message)
+                # - Record the state to the file:
+                save_state(state_file, arm_state)
+            else:
+                pass
+        else:
+            pass
         
     elif arm_state == 3:
         button_state = GPIO.input(13) 
