@@ -22,11 +22,14 @@ def change_bucket_name():
 
     
 def change_aws_settings():
-    # - Create the ~/.aws directory:
+    # - Create the /home/pi/.aws directory:
     print()
-    print("- Creating directory ~/.aws:")
-    os.mkdir('/home/pi/.aws')
-    print("- Done!")
+    print("- Creating directory /home/pi/.aws:")
+    try:
+        os.mkdir('/home/pi/.aws')
+        print("- Done!")
+    except:
+        print("- It already exists.")
     # - Set the region:
     print()
     try:
@@ -125,10 +128,10 @@ else:
 print()
 print()
 print("Setting up AWS Credentials...")
-if os.path.exists('~/.aws') == True:
+if os.path.exists('/home/pi/.aws') == True:
     
     # - Show and prompt to change it:
-    print("- The ~/.aws folder that contains the settings exists.")
+    print("- The /home/pi/.aws folder that contains the settings exists.")
     try:
         change_it = raw_input("- Do you want to change settings? (y/n): ")
     except:
