@@ -3,11 +3,23 @@ import time
 from loggers import log_error, log_event
 
 reporting_program_name = 'rpi_home_guardian.py'
-event_message = 'Starting program'
+event_message = 'Home guardian booting up'
 log_event(reporting_program_name, event_message)
 
 # - Read initial state (1=unarmed, 2=arming, 3=armed):
 arm_state = 1
+state_file = 'arm_state.txt'
+if not os.path.exists(state_file):
+    print('- No arm_state file, creating...')
+    functions.save_state(state_file, arm_state)
+    print("-- Done!")
+else:
+    arm_state = functions.read_state(state_file)
+    
+# - Log the state in the events:
+reporting_program_name = 'rpi_home_guardian.py'
+event_message = 'STATE is {} (1=unarmed, 2=arming, 3=armed)'.format(arm_state)
+log_event(reporting_program_name, event_message)
 
 # - Arming time (sec)
 arming_time = 20
@@ -33,7 +45,7 @@ while True:
             time.sleep(0.8)
         # - Record UNAMED -> ARMING in the event log:
         reporting_program_name = 'rpi_home_guardian.py'
-        event_message = '{}s pressed. Home guardian ARMED'.format(arming_time)
+        event_message = '{}s or arming passed. Home guardian ARMED'.format(arming_time)
         log_event(reporting_program_name, event_message)
         arm_state = 3
 

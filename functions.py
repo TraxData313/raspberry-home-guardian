@@ -19,6 +19,15 @@ import boto3
 from botocore.exceptions import ClientError
 
 
+
+def save_state(state_file, arm_state):
+    saveFile = open(state_file, 'w')
+    saveFile.write(str(arm_state))
+    saveFile.close()
+    
+def read_state(state_file):
+    readMe = int(open(state_file, 'r').read())
+
 def flash_led(flashes=3):
     for i in range(flashes):
         GPIO.output(15,GPIO.HIGH)

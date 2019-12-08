@@ -3,6 +3,7 @@ settings.txt
 notes.txt
 test_*
 *.pyc
+arm_state.txt
 
 # Ignore the media:
 ./media/*
