@@ -15,6 +15,8 @@ while True:
     if arm_state == 1:
         # - Change the state if the burron is pressed:
         arm_state = read_button(arm_state)
+        
+        
     
     # - ARMING:
     elif arm_state == 2:
@@ -32,3 +34,5 @@ while True:
             functions.take_video(5)
         else:
             time.sleep(1)
+    
+    time.sleep(0.1)
