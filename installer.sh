@@ -24,9 +24,15 @@ python configure.py
 echo "- Done!"
 echo " "
 
-# - Make the rpi_home_guardian.sh executable:
+# - Make the sh files executable:
 echo "Making the rpi_home_guardian.sh executable..."
 chmod +x rpi_home_guardian.sh
+echo "- Done!"
+echo "Making the update.sh executable..."
+chmod +x update.sh
+echo "- Done!"
+echo "Making the start.sh and stop.sh executable..."
+chmod +x update.sh
 echo "- Done!"
 echo " "
 
