@@ -49,7 +49,7 @@ def read_button(arm_state):
     if arm_state == 1:
         button_state = GPIO.input(13) 
         if button_state == True:
-            button_state = confirm_button_press()
+            print(confirm_button_press())
             arm_state = 1
         else:
             pass
