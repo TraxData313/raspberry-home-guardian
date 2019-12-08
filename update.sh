@@ -6,7 +6,21 @@
 # sudo ./update.sh
 
 # Update to the lattest version:
-git pull
+git fetch --all
+git reset --hard origin/master
+
+# - Make the sh files executable:
+echo "Making the rpi_home_guardian.sh executable..."
+chmod +x rpi_home_guardian.sh
+echo "- Done!"
+echo "Making the update.sh executable..."
+chmod +x update.sh
+echo "- Done!"
+echo "Making the start.sh and stop.sh executable..."
+chmod +x start.sh
+chmod +x start.sh
+echo "- Done!"
+echo " "
 
 # - Place the new rpi_home_guardian.service in /etc/systemd/system:
 echo "- Copying the rpi_home_guardian.service in /etc/systemd/system..."
