@@ -25,9 +25,9 @@ while True:
     # - ARMING:
     elif arm_state == 2:
         # - Delay arming_time seconds than go to state armed:
-        for i in range(arming_time)
+        for i in range(arming_time):
             functions.flash_led(flashes=2)
-            time.sleep(1)
+            time.sleep(0.8)
         arm_state = 3
 
         
