@@ -53,7 +53,7 @@ def confirm_button_press():
         pass 
     return confirm_press_bool
 
-def read_button(arm_state):
+def read_button_and_change_state(arm_state, state_file):
     if arm_state == 1:
         button_state = GPIO.input(13) 
         if button_state == True:
@@ -63,6 +63,8 @@ def read_button(arm_state):
                 reporting_program_name = 'rpi_home_guardian.py'
                 event_message = 'Button pressed. Arming the home guardian...'
                 log_event(reporting_program_name, event_message)
+                # - Record the state to the file:
+                save_state(state_file, arm_state)
             else:
                 pass
         else:
@@ -81,6 +83,8 @@ def read_button(arm_state):
                 reporting_program_name = 'rpi_home_guardian.py'
                 event_message = 'Button pressed. Home guardian DISARMED'
                 log_event(reporting_program_name, event_message)
+                # - Record the state to the file:
+                save_state(state_file, arm_state)
             else:
                 pass
         else:

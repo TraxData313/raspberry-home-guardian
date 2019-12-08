@@ -9,7 +9,7 @@ event_message = 'Home guardian booting up'
 log_event(reporting_program_name, event_message)
 
 # - Read initial state (1=unarmed, 2=arming, 3=armed):
-arm_state = 1
+arm_state = 3 # Defaults to ARMED
 state_file = 'arm_state.txt'
 if not os.path.exists(state_file):
     print('- No arm_state file, creating...')
@@ -21,8 +21,10 @@ else:
     except Exception as error_message:
         log_error(reporting_program_name, error_message)
         print("- Failed to load the arm_state. Removing the file...")
+        os.remove(state_file)
         arm_state = 3
         event_message = 'Error handeled. Removed the corrupted arm_state file. State set to ARMED'
+        print(event_message)
         log_event(reporting_program_name, event_message)
     
 # - Log the state in the events:
@@ -38,7 +40,7 @@ while True:
     # - UNARMED:
     if arm_state == 1:
         # - Got to arming if the button is pressed for 3 sec:
-        arm_state = functions.read_button(arm_state)
+        arm_state = functions.read_button_and_change_state(arm_state, state_file)
         
         # - Flash 1 time to indicate state is UNARMED:
         functions.flash_led(flashes=1)
@@ -57,12 +59,14 @@ while True:
         event_message = '{}s or arming passed. Home guardian ARMED'.format(arming_time)
         log_event(reporting_program_name, event_message)
         arm_state = 3
+        # - Record the state to the file:
+        save_state(state_file, arm_state)
 
         
     # - ARMED:
     elif arm_state == 3:
         # - Disarm if the button is pressed for 3 sec:
-        arm_state = functions.read_button(arm_state)
+        arm_state = functions.read_button_and_change_state(arm_state, state_file)
     
         '''
         # - Check for files ./media and upload them:
