@@ -3,7 +3,9 @@ import RPi.GPIO as GPIO
 import time, datetime
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(11, GPIO.IN)
+GPIO.setup(11, GPIO.IN)  # PIR sensor
+GPIO.setup(13, GPIO.IN)  # Button
+GPIO.setup(15, GPIO.OUT) # LED
 
 # - PiCamera:
 from picamera import PiCamera
@@ -15,6 +17,54 @@ from loggers import log_event, log_error
 import os
 import boto3
 from botocore.exceptions import ClientError
+
+
+def confirm_button_press():
+    confirm_press_bool = False
+    # - if the button is pressed, wait for 3 seconds and then check it again.
+    # - if still pressed -> transition to state 2 (arming)
+    GPIO.output(15,GPIO.HIGH) # Turn LED on
+    time.sleep(3)
+    button_state = GPIO.input(13)
+    if button_state == True:
+        # - LED flassing:
+        GPIO.output(15,GPIO.LOW)
+        time.sleep(0.1)
+        GPIO.output(15,GPIO.HIGH)
+        time.sleep(0.1)
+        GPIO.output(15,GPIO.LOW)
+        time.sleep(0.1)
+        GPIO.output(15,GPIO.HIGH)
+        time.sleep(0.1)
+        GPIO.output(15,GPIO.LOW)
+        time.sleep(0.1)
+        GPIO.output(15,GPIO.HIGH)
+        time.sleep(0.1)
+        # - confirm the press
+        confirm_press_bool = True
+    else:
+        GPIO.output(15,GPIO.LOW) # Turn LED off
+
+
+def read_button(arm_state):
+    if arm_state == 1:
+        button_state = GPIO.input(13) 
+        if button_state == True:
+            button_state = confirm_button_press()
+            arm_state = 1
+        else:
+            pass
+        
+    elif arm_state == 2:
+        pass
+        
+    elif arm_state == 3:
+        pass
+        
+    return arm_state
+
+
+
 
 
 def motion_detect():

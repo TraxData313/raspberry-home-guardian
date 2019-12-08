@@ -6,13 +6,29 @@ reporting_program_name = 'rpi_home_guardian.py'
 event_message = 'Starting program'
 log_event(reporting_program_name, event_message)
 
-while True:
-    # - Check for files ./media and upload them:
-    functions.check_upload_files()
+# - Read initial state (1=unarmed, 2=arming, 3=armed):
+arm_state = 1
 
-    # - Detect motion:
-    motion_bool = functions.motion_detect()
-    if motion_bool == True:
-        functions.take_video(5)
-    else:
-        time.sleep(1)
+
+while True:
+    # - UNARMED:
+    if arm_state == 1:
+        # - Change the state if the burron is pressed:
+        arm_state = read_button(arm_state)
+    
+    # - ARMING:
+    elif arm_state == 2:
+        time.sleep(5)
+        arm_state = 3
+
+    # - ARMED:
+    elif arm_state == 3:
+        # - Check for files ./media and upload them:
+        functions.check_upload_files()
+
+        # - Detect motion:
+        motion_bool = functions.motion_detect()
+        if motion_bool == True:
+            functions.take_video(5)
+        else:
+            time.sleep(1)
