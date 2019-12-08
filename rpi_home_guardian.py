@@ -60,7 +60,7 @@ while True:
         log_event(reporting_program_name, event_message)
         arm_state = 3
         # - Record the state to the file:
-        save_state(state_file, arm_state)
+        functions.save_state(state_file, arm_state)
 
         
     # - ARMED:
@@ -84,6 +84,7 @@ while True:
         functions.flash_led(flashes=3)
         # - Delay:
         time.sleep(0.7)
+        
         
     # - STATE is corrupted error:
     else:
