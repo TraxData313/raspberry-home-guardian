@@ -20,7 +20,10 @@ else:
         arm_state = functions.read_state(state_file)
     except Exception as error_message:
         log_error(reporting_program_name, error_message)
-        print("- Failed to load the arm_state. Check the error.log")
+        print("- Failed to load the arm_state. Removing the file...")
+        arm_state = 3
+        event_message = 'Error handeled. Removed the corrupted arm_state file. State set to ARMED'
+        log_event(reporting_program_name, event_message)
     
 # - Log the state in the events:
 reporting_program_name = 'rpi_home_guardian.py'
@@ -83,3 +86,4 @@ while True:
         reporting_program_name = 'rpi_home_guardian.py'
         error_message = 'State is CORRUPTED. Not equil to 1,2 or 3, or the file is illformated. Delete {} and rerun the program!'.format(state_file)
         log_error(reporting_program_name, error_message)
+        break
