@@ -25,7 +25,6 @@ def flash_led(flashes=3):
         time.sleep(0.1)
         GPIO.output(15,GPIO.LOW)
         time.sleep(0.1)
-    time.sleep(0.5)
 
 
 def confirm_button_press():
@@ -50,16 +49,26 @@ def read_button(arm_state):
     if arm_state == 1:
         button_state = GPIO.input(13) 
         if button_state == True:
-            print(confirm_button_press())
-            arm_state = 1
+            if confirm_button_press() == True:
+                arm_state = 2
+            else:
+                pass
         else:
             pass
+        time.sleep(0.5)
         
     elif arm_state == 2:
-        pass
+        pass # not used
         
     elif arm_state == 3:
-        pass
+        button_state = GPIO.input(13) 
+        if button_state == True:
+            if confirm_button_press() == True:
+                arm_state = 1
+            else:
+                pass
+        else:
+            pass
         
     return arm_state
 
