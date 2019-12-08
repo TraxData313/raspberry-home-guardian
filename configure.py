@@ -34,7 +34,7 @@ def change_aws_settings():
     except:
         aws_region = input("- Please enter your aws region (example: eu-west-1): ")
     aws_region_formated = "region=" + aws_region
-    outputFile = "~/.aws/config"
+    outputFile = "/home/pi/.aws/config"
     saveFile = open(outputFile, 'w')
     saveFile.write('[default]')
     saveFile.write('\n')
@@ -55,7 +55,7 @@ def change_aws_settings():
     except:
         aws_secret_access_key = input("- Please enter your aws_secret_access_key: ")
     aws_secret_access_key_formated = "aws_secret_access_key = " + aws_secret_access_key
-    outputFile = "~/.aws/credentials"
+    outputFile = "/home/pi/.aws/credentials"
     saveFile = open(outputFile, 'w')
     saveFile.write('[default]')
     saveFile.write('\n')
