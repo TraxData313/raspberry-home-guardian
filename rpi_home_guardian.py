@@ -55,19 +55,22 @@ while True:
     # - ARMING:
     elif arm_state == 2:
         # - Delay arming_time seconds than go to state armed:
-        for i in range(arming_time):
+        i = 0
+        while (i < arming_time) and (arm_state==2):
             # - Check if the button is pressed to abort the arming:
             arm_state = functions.read_button_and_change_state(arm_state, state_file)
             # - Flash the LED:
             functions.flash_led(flashes=2)
             time.sleep(0.8)
-        # - Record UNAMED -> ARMING in the event log:
-        reporting_program_name = 'rpi_home_guardian.py'
-        event_message = '{}s or arming passed. Home guardian ARMED'.format(arming_time)
-        log_event(reporting_program_name, event_message)
-        arm_state = 3
-        # - Record the state to the file:
-        functions.save_state(state_file, arm_state)
+            i = i + 1
+        if arm_state==2:
+            # - Record UNAMED -> ARMING in the event log:
+            reporting_program_name = 'rpi_home_guardian.py'
+            event_message = '{}s or arming passed. Home guardian ARMED'.format(arming_time)
+            log_event(reporting_program_name, event_message)
+            arm_state = 3
+            # - Record the state to the file:
+            functions.save_state(state_file, arm_state)
 
         
     # - ARMED:
