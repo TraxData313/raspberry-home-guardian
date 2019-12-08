@@ -9,6 +9,7 @@ log_event(reporting_program_name, event_message)
 # - Read initial state (1=unarmed, 2=arming, 3=armed):
 arm_state = 1
 
+functions.flash_led(flashes=20)
 
 while True:
     # - UNARMED:
