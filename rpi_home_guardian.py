@@ -16,7 +16,11 @@ if not os.path.exists(state_file):
     functions.save_state(state_file, arm_state)
     print("-- Done!")
 else:
-    arm_state = functions.read_state(state_file)
+    try:
+        arm_state = functions.read_state(state_file)
+    except Exception as error_message:
+        log_error(reporting_program_name, error_message)
+        print("- Failed to load the arm_state. Check the error.log")
     
 # - Log the state in the events:
 reporting_program_name = 'rpi_home_guardian.py'
