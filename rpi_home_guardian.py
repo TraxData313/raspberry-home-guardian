@@ -14,7 +14,7 @@ while True:
     # - UNARMED:
     if arm_state == 1:
         # - Change the state if the burron is pressed:
-        arm_state = read_button(arm_state)
+        arm_state = functions.read_button(arm_state)
         
         
     
