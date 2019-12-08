@@ -25,7 +25,7 @@ def change_aws_settings():
     # - Create the ~/.aws directory:
     print()
     print("- Creating directory ~/.aws:")
-    os.mkdir('~/.aws')
+    os.mkdir('/home/pi/.aws')
     print("- Done!")
     # - Set the region:
     print()
