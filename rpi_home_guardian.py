@@ -21,6 +21,9 @@ while True:
         
         # - Flash 1 time to indicate state is UNARMED:
         functions.flash_led(flashes=1)
+        # - Delay:
+        time.sleep(0.9)
+    
     
     # - ARMING:
     elif arm_state == 2:
@@ -28,6 +31,10 @@ while True:
         for i in range(arming_time):
             functions.flash_led(flashes=2)
             time.sleep(0.8)
+        # - Record UNAMED -> ARMING in the event log:
+        reporting_program_name = 'rpi_home_guardian.py'
+        event_message = '{}s pressed. Home guardian ARMED'.format(arming_time)
+        log_event(reporting_program_name, event_message)
         arm_state = 3
 
         
@@ -50,5 +57,5 @@ while True:
         
         # - Flash 3 times to indicate state is ARMED:
         functions.flash_led(flashes=3)
-    
-    time.sleep(0.5)
+        # - Delay:
+        time.sleep(0.7)

@@ -26,7 +26,6 @@ def flash_led(flashes=3):
         GPIO.output(15,GPIO.LOW)
         time.sleep(0.1)
 
-
 def confirm_button_press():
     confirm_press_bool = False
     # - if the button is pressed, wait for 3 seconds and then check it again.
@@ -44,13 +43,16 @@ def confirm_button_press():
         pass 
     return confirm_press_bool
 
-
 def read_button(arm_state):
     if arm_state == 1:
         button_state = GPIO.input(13) 
         if button_state == True:
             if confirm_button_press() == True:
                 arm_state = 2
+                # - Record UNAMED -> ARMING in the event log:
+                reporting_program_name = 'rpi_home_guardian.py'
+                event_message = 'Button pressed. Arming the home guardian...'
+                log_event(reporting_program_name, event_message)
             else:
                 pass
         else:
@@ -65,6 +67,10 @@ def read_button(arm_state):
         if button_state == True:
             if confirm_button_press() == True:
                 arm_state = 1
+                # - Record ARMED -> UNARMED in the event log:
+                reporting_program_name = 'rpi_home_guardian.py'
+                event_message = 'Button pressed. Home guardian DISARMED'
+                log_event(reporting_program_name, event_message)
             else:
                 pass
         else:
