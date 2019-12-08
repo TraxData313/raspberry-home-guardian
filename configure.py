@@ -22,7 +22,13 @@ def change_bucket_name():
 
     
 def change_aws_settings():
+    # - Create the ~/.aws directory:
+    print()
+    print("- Creating directory ~/.aws:")
+    os.mkdir('~/.aws')
+    print("- Done!")
     # - Set the region:
+    print()
     try:
         aws_region = raw_input("- Please enter your aws region (example: eu-west-1): ")
     except:
@@ -37,6 +43,7 @@ def change_aws_settings():
     print("- AWS region set to {}".format(aws_region))
     
     # - Set the aws_access_key_id and the aws_secret_access_key:
+    print()
     try:
         aws_access_key_id = raw_input("- Please enter your aws_access_key_id: ")
     except:
