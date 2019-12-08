@@ -19,31 +19,30 @@ import boto3
 from botocore.exceptions import ClientError
 
 
+def flash_led(flashes=3)
+    for i in range(flashes):
+        GPIO.output(15,GPIO.HIGH)
+        time.sleep(0.1)
+        GPIO.output(15,GPIO.LOW)
+    time.sleep(0.5)
+
+
 def confirm_button_press():
     confirm_press_bool = False
     # - if the button is pressed, wait for 3 seconds and then check it again.
     # - if still pressed -> transition to state 2 (arming)
     GPIO.output(15,GPIO.HIGH) # Turn LED on
     time.sleep(3)
+    GPIO.output(15,GPIO.LOW)
     button_state = GPIO.input(13)
     if button_state == True:
         # - LED flassing:
-        GPIO.output(15,GPIO.LOW)
-        time.sleep(0.1)
-        GPIO.output(15,GPIO.HIGH)
-        time.sleep(0.1)
-        GPIO.output(15,GPIO.LOW)
-        time.sleep(0.1)
-        GPIO.output(15,GPIO.HIGH)
-        time.sleep(0.1)
-        GPIO.output(15,GPIO.LOW)
-        time.sleep(0.1)
-        GPIO.output(15,GPIO.HIGH)
-        time.sleep(0.1)
-        # - confirm the press
+        flash_led(flashes=5)
+        # - confirm the press:
         confirm_press_bool = True
     else:
         GPIO.output(15,GPIO.LOW) # Turn LED off
+    return confirm_press_bool
 
 
 def read_button(arm_state):
