@@ -1,7 +1,9 @@
 import functions
 import time
+import os
 from loggers import log_error, log_event
 
+# - Log starting event:
 reporting_program_name = 'rpi_home_guardian.py'
 event_message = 'Home guardian booting up'
 log_event(reporting_program_name, event_message)
