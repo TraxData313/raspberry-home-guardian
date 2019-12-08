@@ -28,7 +28,6 @@ def save_state(state_file, arm_state):
 def read_state(state_file):
     return int(open(state_file, 'r').read())
     
-
 def flash_led(flashes=3):
     for i in range(flashes):
         GPIO.output(15,GPIO.HIGH)

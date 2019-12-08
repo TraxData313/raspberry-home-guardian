@@ -3,6 +3,14 @@ import time
 import os
 from loggers import log_error, log_event
 
+import RPi.GPIO as GPIO
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(15, GPIO.OUT) # LED
+
+# - Arming time (sec)
+arming_time = 10
+
 # - Log starting event:
 reporting_program_name = 'rpi_home_guardian.py'
 event_message = 'Home guardian booting up'
@@ -31,10 +39,6 @@ else:
 reporting_program_name = 'rpi_home_guardian.py'
 event_message = 'STATE is {} (1=unarmed, 2=arming, 3=armed)'.format(arm_state)
 log_event(reporting_program_name, event_message)
-
-# - Arming time (sec)
-arming_time = 20
-
 
 while True:
     # - UNARMED:
@@ -68,18 +72,18 @@ while True:
         # - Disarm if the button is pressed for 3 sec:
         arm_state = functions.read_button_and_change_state(arm_state, state_file)
     
-        '''
         # - Check for files ./media and upload them:
         functions.check_upload_files()
 
         # - Detect motion:
         motion_bool = functions.motion_detect()
         if motion_bool == True:
+            GPIO.output(15,GPIO.HIGH)
             functions.take_video(5)
+            GPIO.output(15,GPIO.LOW)
         else:
             pass
-        '''
-        
+                
         # - Flash 3 times to indicate state is ARMED:
         functions.flash_led(flashes=3)
         # - Delay:

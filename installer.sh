@@ -6,6 +6,9 @@
 # sudo ./installer.sh
 
 
+
+
+
 # - Initial message:
 echo "Installing rpi_home_guardian service..."
 
