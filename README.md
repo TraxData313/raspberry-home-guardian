@@ -4,8 +4,8 @@
 ## Build steps:
 
 ### Get the parts:
-1. <b>Raspberry PI 3 Model B</b> - about $40 (https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
-1. <b>Raspberry camera</b> - about $30 (https://www.raspberrypi.org/products/camera-module-v2/)
+1. <b>[Raspberry PI 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)</b> - about $40
+1. <b>[Raspberry camera](https://www.raspberrypi.org/products/camera-module-v2/)</b> - about $30 
 1. <b>[PIR motion sensor](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/PIRsensor.PNG)</b> - about $2 (Search ebay for "PIR sensor arduino")
 1. <b>[LEDs](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/LEDs.PNG)</b> - about 1$ (Search ebay for "LEDs arduino")
 1. <b>[Jumper cables](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/jumperWires.PNG)</b> - about $3 (Female-to-femaile, male-to-female, and male-to-maile. At least 10 of each.)
