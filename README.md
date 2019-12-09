@@ -22,13 +22,13 @@
 1. From the OS GUI go to internet settigns and set up a static IPv4 address
 1. From raspberry configuration enable SSH, Pi camera, disable GUI with auto login to pi user
 1. SSH to the Raspberry and run the below commands:
-1. 1. git clone https://github.com/TraxData313/raspberry-home-guardian-with-aws.git
-1. 1. cd raspberry-home-guardian-with-aws
-1. 1. chmode + x ./installer.sh
-1. 1. sudo ./installer.sh
+   1. git clone https://github.com/TraxData313/raspberry-home-guardian-with-aws.git
+   1. cd raspberry-home-guardian-with-aws
+   1. chmode + x ./installer.sh
+   1. sudo ./installer.sh
 1. Follow the installer, it will prompt you for:
-1. 1. S3 bucket name and region
-1. 1. AWS credentials
+   1. S3 bucket name and region
+   1. AWS credentials
    
 
 
