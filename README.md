@@ -7,10 +7,10 @@
 1. Raspberry PI 3 Model B - about $40 (https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 1. Raspberry camera - about $30 (https://www.raspberrypi.org/products/camera-module-v2/)
 1. [PIR motion sensor](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/PIRsensor.PNG) - about $2 (Search ebay for "PIR sensor arduino")
-1. LEDs - about 1$ (Search ebay for "LEDs arduino")
-1. Jumper cables - about $5 (Female-to-femaile, male-to-female, and male-to-maile. At least 10 of each.)
-1. Button - about $1 (Search for "button arduino". They are small, 4 legged buttons. You'll need one for this project.)
-1. Resistors - (Get a kit with a few resistor options, something between 50 and 500 Ohms should work ok. The less the resistance the brighter the LED.)
+1. [LEDs](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/LEDs.PNG) - about 1$ (Search ebay for "LEDs arduino")
+1. [Jumper cables](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/jumperWires.PNG) - about $5 (Female-to-femaile, male-to-female, and male-to-maile. At least 10 of each.)
+1. [Button](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/button.PNG) - about $1 (Search for "button arduino". They are small, 4 legged buttons. You'll need one for this project.)
+1. [Resistors](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/Resistors.PNG) - (Get a kit with a few resistor options, something between 50 and 500 Ohms should work ok. The less the resistance the brighter the LED.)
 
 ### Connect the parts:
 1. 
