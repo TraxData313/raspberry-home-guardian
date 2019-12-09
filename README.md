@@ -1,11 +1,20 @@
 # raspberry-home-guardian - in progress...
-- <b>IN SUMMARY</b>: Detect motion -> take video and upload it to S3 -> notify via SMS/email
-- The Raspberry will create new video/pictures, when motion is detected
-- A python script will detects the new video/pictures, and will upload them to an AWS S3 bucket
-- When new video arrives in S3, an SNS will notify the user via email/SMS
-- Build a buton, light and beeper in order:
-- - Use the button to start/stop the guardian, instead of using the GUI
-- - Sound an alarm when intrusion is detected
+- Detects motion, captures video, uploads the video to AWS S3 bucket and the user receives email/SMS notification.
+
+## Build steps:
+
+### Get the parts:
+1. Raspberry PI 3 Model B - about $40 (https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+1. Raspberry camera - about $30 (https://www.raspberrypi.org/products/camera-module-v2/)
+1. PIR motion sensor - about $2 (Search ebay for "PIR sensor arduino")
+1. LEDs - about 1$ (Search ebay for "LEDs arduino")
+1. Jumper cables - about $5 (Female-to-femaile, male-to-female, and male-to-maile. At least 10 of each.)
+1. Button - about $1 (Search for "button arduino". They are small, 4 legged buttons. You'll need one for this project.)
+1. Resistors - (Get a kit with a few resistor options, something between 50 and 500 Ohms should work ok. The less the resistance the brighter the LED.)
+
+### Connect the parts:
+1. 
+
 
 
 ### Install steps:
@@ -33,15 +42,6 @@ region=eu-west-1 <br></i>
    
 
 
-### Used HW:
-- Raspberry PI 3 Model B
-- Raspberry camera
-- PIR motion sensor
-- LEDs
-- jumper cables
-
-
-### Usage:
 
 
 ### Notes:
