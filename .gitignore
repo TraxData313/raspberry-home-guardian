@@ -5,6 +5,9 @@ test_*
 *.pyc
 arm_state.txt
 
+# Ignore the sample images:
+*.PNG
+
 # Ignore the media:
 ./media/*
 
