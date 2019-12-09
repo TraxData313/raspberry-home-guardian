@@ -21,33 +21,16 @@
 1. Install raspbian on the raspberry (https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 1. From the OS GUI go to internet settigns and set up a static IPv4 address
 1. From raspberry configuration enable SSH, Pi camera, disable GUI with auto login to pi user
-1. To work with AWS resources install boto3, SSH to the raspberry and:
-   1. Install the library with:
-pip install boto3
-   1. Create the AWS hidden directory:
-mkdir ~/.aws
-   1. Next, set up credentials, enter commad <i>nano ~/.aws/credentials</i> -> and fill in your credentials: <br><i>
-[default] <br>
-aws_access_key_id = <b>YOUR_KEY</b> <br>
-aws_secret_access_key = <b>YOUR_SECRET</b> <br></i>
-   1. Then, set up your region by command <i>nano ~/.aws/config</i>, replace the region if you will use another: <br>
-<i>[default] <br>
-region=eu-west-1 <br></i>
-1. Create an S3 bucket in AWS and set it up to receive email when new file gets created
-   1. Follow the steps here: https://www.youtube.com/watch?v=EGyuzMbXD0Y
-1. SSH to the raspberry set up the service: 
-   1. Clone the repo: `git pull https://github.com/TraxData313/raspberry-home-guardian-with-aws.git`
-   1. Make the installer executable: `chmod +x ./installer.sh`
-   1. Run the installer: `sudo ./installer.sh`
+1. SSH to the Raspberry and run the below commands:
+1. 1. git clone https://github.com/TraxData313/raspberry-home-guardian-with-aws.git
+1. 1. cd raspberry-home-guardian-with-aws
+1. 1. chmode + x ./installer.sh
+1. 1. sudo ./installer.sh
+1. Follow the installer, it will prompt you for:
+1. 1. S3 bucket name and region
+1. 1. AWS credentials
    
 
 
-
-
 ### Notes:
-- port = 80
-- Directory where media is saved: /var/www/html/media/
-- RPi-Cam-Web-Interface (https://elinux.org/RPi-Cam-Web-Interface#Basic_Installation)
-- Video format is h264. VLC player supports it.
-
-
+- Video format is h264, not all mainstream video players support it. I use VLC player - it works fine
