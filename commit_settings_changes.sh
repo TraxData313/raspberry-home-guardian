@@ -6,7 +6,7 @@
 # sudo ./commit_settings_changes.sh
 
 # - Make the service start at boot and start it now:
-echo "Reloading the deamon..."
+echo "Reloading the deamon with the new settings..."
 systemctl stop rpi_home_guardian.service
 systemctl daemon-reload
 systemctl start rpi_home_guardian.service
