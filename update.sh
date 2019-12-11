@@ -45,7 +45,8 @@ echo " "
 echo " "
 
 # - Make the service start at boot and start it now:
-echo "Make the service start at boot, reload daemons and starting it now..."
+echo "Reloading the deamon..."
+systemctl stop rpi_home_guardian.service
 systemctl enable rpi_home_guardian.service
 systemctl daemon-reload
 systemctl start rpi_home_guardian.service
