@@ -83,7 +83,7 @@ def change_aws_settings():
 # - STEP 1: Create the ./media folder:
 print("Creating the media folder...")
 if not os.path.exists('media'):
-    os.mkdir('./media');
+    os.mkdir('./media')
     print("- Done!")
 else:
     print("- ./media already exists, passing this step")
