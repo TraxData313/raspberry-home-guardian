@@ -8,9 +8,6 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(15, GPIO.OUT) # LED
 
-# - Arming time (sec)
-arming_time = 300
-
 # - Log starting event:
 reporting_program_name = 'rpi_home_guardian.py'
 event_message = 'Home guardian booting up'
@@ -39,6 +36,21 @@ else:
 reporting_program_name = 'rpi_home_guardian.py'
 event_message = 'STATE is {} (1=unarmed, 2=arming, 3=armed)'.format(arm_state)
 log_event(reporting_program_name, event_message)
+
+# - Read the other parameters (seconds):
+try:
+    parameters_from_settings = open('settings.txt', 'r').readlines()
+    arming_time = int(parameters_from_settings[3])
+    video_lenght = int(parameters_from_settings[5])
+except Exception as error_message:
+    log_error(reporting_program_name, error_message)
+    # - Revert to defaults:
+    arming_time = 300
+    video_lenght = 5
+    # - Log event:
+    event_message = 'Error handeled. Reverted parameters to defaults: arming_time = 300s, video_lenght = 5s'
+    log_event(reporting_program_name, event_message)
+
 
 while True:
     # - UNARMED:
@@ -87,7 +99,7 @@ while True:
             motion_bool = functions.motion_detect()
             if motion_bool == True:
                 GPIO.output(15,GPIO.HIGH)
-                functions.take_video(5)
+                functions.take_video(video_lenght)
                 GPIO.output(15,GPIO.LOW)
             else:
                 pass
