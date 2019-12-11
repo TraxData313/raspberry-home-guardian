@@ -50,5 +50,6 @@ systemctl stop rpi_home_guardian.service
 systemctl daemon-reload
 systemctl start rpi_home_guardian.service
 systemctl enable rpi_home_guardian.service
-echo "- Done!"
+echo "- running 'systemctl daemon-reload'..."
+echo "- Done! Update successful!"
 echo " "
