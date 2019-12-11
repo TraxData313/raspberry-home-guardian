@@ -17,7 +17,7 @@
 
 ### Connect the parts:
 1. Connect raspberry pi camera - [HOW TO HERE](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/3)
-1. Connect the PIR sensor, button and LED [PICTURE](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/RPI3pinout.png):
+1. Connect the PIR sensor, button and LED [PICTURE](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/ExamplePictures/RPI3pinout.png):
    1. PIR sensor to PIN# 11
    1. Button to PIN# 13
    1. LED to PIN# 15
