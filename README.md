@@ -5,6 +5,8 @@
 
 ### Get the parts:
 1. <b>[Raspberry PI 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)</b> - about $40
+1. <b>Micro SD Card 16GB</b> - about $5
+1. <b>Micro CD Card Reader</b> - less than $1
 1. <b>[Raspberry camera](https://www.raspberrypi.org/products/camera-module-v2/)</b> - about $30 
 1. <b>[PIR motion sensor](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/PIRsensor.PNG)</b> - about $2 (Search ebay for "PIR sensor arduino")
 1. <b>[LEDs](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/LEDs.PNG)</b> - about 1$ (Search ebay for "LEDs arduino")
