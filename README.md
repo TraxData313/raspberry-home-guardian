@@ -41,6 +41,10 @@
 - - Blinks once if the guardian is disarmed - hold the button to start arming
 - - Blinks twice if the guardian is arming - hold the button to disarm. If 5 minutes (default) pass, it will arm
 - - Blinks three time if the guardian is armed - when armed the guardian will record video upon motion detected, will upload the video and will notify the user via email/SMS. Hold the button to disarm
+- Settings can be changed from the settings.txt file. After you make changes, run <i>sudo ./commit_settings_changes.sh</i> to commit the changes. The settings are:
+- - Bucket name - set the bucket name (string), leave no spaces or other symbols. The S3 bucket name where the files are uploaded.
+- - Arming time in seconds - seconds (integer), leave no spaces or other symbols. Determines how long the raspberry will delay before starting to monitor for motion.
+- - Video lenght in seconds - seconds (integer), leave no spaces or other symbols. Determines how long the video will be upon motion detected.
 
 
 ### Notes:
