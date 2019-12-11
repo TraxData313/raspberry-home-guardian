@@ -8,6 +8,7 @@ arm_state.txt
 # Ignore the sample images:
 *.PNG
 *.png
+./ExamplePictures
 
 # Ignore the media:
 ./media/*
