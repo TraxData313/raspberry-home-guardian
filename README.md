@@ -1,4 +1,4 @@
-# RPI Home Guardian
+# Raspberry Home Guardian
 - Detects motion, records video, uploads it to the cloud (AWS S3) and the user gets email/SMS
 
 ## Build steps:
