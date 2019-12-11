@@ -18,6 +18,10 @@ echo "Making the rpi_home_guardian.sh executable..."
 chmod +x rpi_home_guardian.sh
 echo "- Done!"
 echo " "
+echo "Making the installer.sh executable..."
+chmod +x installer.sh
+echo "- Done!"
+echo " "
 echo "Making the update.sh executable..."
 chmod +x update.sh
 echo "- Done!"
