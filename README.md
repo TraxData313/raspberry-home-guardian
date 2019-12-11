@@ -1,5 +1,5 @@
-# raspberry-home-guardian - in progress...
-- Detects motion, captures video, uploads the video to AWS S3 bucket and the user receives email/SMS notification.
+# RPI Home Guardian
+- Detects motion, records video, uploads it to the cloud (AWS S3) and the user gets email/SMS
 
 ## Build steps:
 
