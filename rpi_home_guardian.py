@@ -82,18 +82,22 @@ while True:
         functions.check_upload_files()
 
         # - Detect motion:
-        motion_bool = functions.motion_detect()
-        if motion_bool == True:
-            GPIO.output(15,GPIO.HIGH)
-            functions.take_video(5)
-            GPIO.output(15,GPIO.LOW)
-        else:
-            pass
+        i = 0
+        while i < 7:
+            motion_bool = functions.motion_detect()
+            if motion_bool == True:
+                GPIO.output(15,GPIO.HIGH)
+                functions.take_video(5)
+                GPIO.output(15,GPIO.LOW)
+            else:
+                pass
+            # - Delay moved here in increments to increase responcivness:
+            time.sleep(0.1)
+            i = i + 1
                 
         # - Flash 3 times to indicate state is ARMED:
         functions.flash_led(flashes=3)
-        # - Delay:
-        time.sleep(0.7)
+        
         
         
     # - STATE is corrupted error:
