@@ -66,7 +66,7 @@ while True:
         if arm_state==2:
             # - Record UNAMED -> ARMING in the event log:
             reporting_program_name = 'rpi_home_guardian.py'
-            event_message = '{}s or arming passed. Home guardian ARMED'.format(arming_time)
+            event_message = '{}s of arming passed. Home guardian ARMED'.format(arming_time)
             log_event(reporting_program_name, event_message)
             arm_state = 3
             # - Record the state to the file:
