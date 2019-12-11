@@ -36,7 +36,7 @@
    1. AWS credentials
    
 ### Usage:
-- LED blinks every second:
+- LED blinks every second, indicating the state. Button is used to change the state:
 - - Blinks once if the guardian is disarmed - hold the button to start arming
 - - Blinks twice if the guardian is arming - hold the button to disarm. If 5 minutes (default) pass, it will arm
 - - Blinks three time if the guardian is armed - when armed the guardian will record video upon motion detected, will upload the video and will notify the user via email/SMS. Hold the button to disarm
