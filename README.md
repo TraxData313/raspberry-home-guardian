@@ -17,10 +17,9 @@
 ### Connect the parts:
 1. Connect raspberry pi camera - [HOW TO HERE](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/3)
 1. Connect the PIR sensor, button and LED [PICTURE](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/RPI3pinout.png):
-   1. PIR sensor to BOARD PIN 11
-   1. Button to BOARD PIN 13
-   1. LED to BOARD PIN 15
-
+   1. PIR sensor to PIN# 11
+   1. Button to PIN# 13
+   1. LED to PIN# 15
 
 
 ### Install steps:
@@ -36,6 +35,11 @@
    1. S3 bucket name and region
    1. AWS credentials
    
+### Usage:
+- LED blinks every second:
+- - Blinks once if the guardian is disarmed - hold the button to start arming
+- - Blinks twice if the guardian is arming - hold the button to disarm. If 5 minutes (default) pass, it will arm
+- - Blinks three time if the guardian is armed - when armed the guardian will record video upon motion detected, will upload the video and will notify the user via email/SMS. Hold the button to disarm
 
 
 ### Notes:
