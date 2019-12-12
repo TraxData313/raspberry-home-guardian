@@ -13,7 +13,7 @@
 1. <b>[LEDs](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/ExamplePictures/LEDs.PNG)</b> - about 1$ (Search ebay for "LEDs arduino")
 1. <b>[Jumper cables](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/ExamplePictures/jumperWires.PNG)</b> - about $3 (Female-to-femaile, male-to-female, and male-to-maile. At least 10 of each.)
 1. <b>[Button](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/ExamplePictures/button.PNG)</b> - about $1 (Search for "button arduino". They are small, 4 legged buttons. You'll need one for this project.)
-1. <b>[Resistors](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/ExamplePictures/Resistors.PNG)</b> - (Get a kit with a few resistor options, something between 50 and 500 Ohms should work ok. The less the resistance the brighter the LED.)
+1. <b>[Resistors](https://raw.githubusercontent.com/TraxData313/raspberry-home-guardian-with-aws/master/ExamplePictures/Resistors.PNG)</b> - about <b>$1</b> (Get a kit with a few resistor options, something between 50 and 500 Ohms should work ok. The less the resistance the brighter the LED.)
 
 ### Connect the parts:
 1. Connect raspberry pi camera - [HOW TO HERE](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/3)
