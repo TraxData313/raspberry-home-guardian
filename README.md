@@ -45,8 +45,9 @@
 - - <b>Bucket name</b> - set the bucket name (string), leave no spaces or other symbols. The S3 bucket name where the files are uploaded.
 - - <b>Arming time in seconds</b> - seconds (integer), leave no spaces or other symbols. Determines how long the raspberry will delay before starting to monitor for motion.
 - - <b>Video lenght in seconds</b> - seconds (integer), leave no spaces or other symbols. Determines how long the video will be upon motion detected.
-- - NOTE: After you make changes, run <b>sudo ./commit_settings_changes.sh</b> to commit the changes.
+- - NOTE: After you make changes, run <b>sudo ./commit_settings_changes.sh</b> - this will reload the deamon with the new settings.
 
 
-### Notes:
+### Notes and hints:
 - Video format is h264, not all mainstream video players support it. I use VLC player - it works fine
+- Install a second LED, directly wired (in parallel) to the PIR sensor, that will blink every time the sensor is detecting motion, even when the guardian is isarmed. This way you will know that the sensor is working properly at all times.
