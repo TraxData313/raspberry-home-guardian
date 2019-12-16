@@ -1,6 +1,7 @@
 # Raspberry Home Guardian
 - Detects motion, records video, uploads it to the cloud (AWS S3) and the user gets email/SMS. 
 - Cheap, simple to use and easy to setup home surveillance system.
+- <b>Playlist</b>: [Raspberry Home Guardian](https://www.youtube.com/watch?v=uMdaL2XcGeY&list=PLNsnBmVpuum6cScqOaGDXp0fT3YUE_tyS)
 
 ## Build steps:
 
