@@ -1,3 +1,9 @@
+<br><br>
+<b>For assistance contact antongeorgiev313@gmail.com</b>
+- I'm gratefull for any feedback!
+- Have fun with this project and don't forget to send me a video when you complete it!
+<br><br>
+
 # Raspberry Home Guardian
 - Detects motion, records video, uploads it to the cloud (AWS S3) and the user gets email/SMS. 
 - Cheap, simple to use and easy to setup home surveillance system.
@@ -52,3 +58,16 @@
 ### Notes and hints:
 - Video format is h264, not all mainstream video players support it. I use VLC player - it works fine
 - Install a second LED, directly wired (in parallel) to the PIR sensor, that will blink every time the sensor is detecting motion, even when the guardian is isarmed. This way you will know that the sensor is working properly at all times.
+
+
+<br><br><br>
+- Not sure if I need to add this or if it ever be red, but here it it:
+<p><em>Disclaimer:</em></p>
+<blockquote>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+</blockquote>
