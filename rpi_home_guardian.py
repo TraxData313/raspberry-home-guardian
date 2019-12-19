@@ -57,6 +57,9 @@ while True:
     if arm_state == 1:
         # - Got to arming if the button is pressed for 3 sec:
         arm_state = functions.read_button_and_change_state(arm_state, state_file)
+
+        # - Check for files ./media and upload them:
+        functions.check_upload_files()
         
         # - Flash 1 time to indicate state is UNARMED:
         functions.flash_led(flashes=1)
