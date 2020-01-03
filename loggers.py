@@ -27,10 +27,14 @@ USAGE with example:
 
 # - Function that logs error messages:
 def log_error(reporting_program_name, error_message):
-    """Adds entry in ./logs/error.log,
+    """Adds entry in ./logs/error.log and in the ./logs/event.log
 
     where the reporting program = reporting_program_name
     and the error_message = error_message
+
+    - Here is how the logs will appear:
+    2019-11-29 12:25:36 reporting_program_name [ERROR]: your error here
+    2019-11-29 12:25:36 reporting_program_name [EVENT]: your event here
     """
     # - Create log dir if it doesn't exist:
     if not os.path.exists('logs'):
@@ -68,6 +72,9 @@ def log_event(reporting_program_name, event_message):
 
     where the reporting program = reporting_program_name
     and the event_message = event_message
+
+    - Here is how the log will appear:
+    2019-11-29 12:25:36 reporting_program_name [EVENT]: your event here
     """
     # - Create log dir if it doesn't exist:
     if not os.path.exists('logs'):
