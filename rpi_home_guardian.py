@@ -89,10 +89,7 @@ while True:
 
         
     # - ARMED:
-    elif arm_state == 3:
-        # - Disarm if the button is pressed for 3 sec:
-        arm_state = functions.read_button_and_change_state(arm_state, state_file)
-    
+    elif arm_state == 3:   
         # - Check for files ./media and upload them:
         functions.check_upload_files()
 
@@ -110,6 +107,9 @@ while True:
             time.sleep(0.1)
             i = i + 1
                 
+        # - Disarm if the button is pressed for 3 sec:
+        arm_state = functions.read_button_and_change_state(arm_state, state_file)
+
         # - Flash 3 times to indicate state is ARMED:
         functions.flash_led(flashes=3)
         
