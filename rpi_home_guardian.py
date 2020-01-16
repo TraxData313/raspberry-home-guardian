@@ -57,14 +57,14 @@ while True:
     if arm_state == 1:
         # - Got to arming if the button is pressed for 3 sec:
         arm_state = functions.read_button_and_change_state(arm_state, state_file)
-
-        # - Check for files ./media and upload them:
-        functions.check_upload_files()
-        
-        # - Flash 1 time to indicate state is UNARMED:
-        functions.flash_led(flashes=1)
-        # - Delay:
-        time.sleep(0.9)
+        # - If arm state has not been changed:
+        if arm_state == 1:
+            # - Check for files ./media and upload them:
+            functions.check_upload_files()
+            # - Flash 1 time to indicate state is UNARMED:
+            functions.flash_led(flashes=1)
+            # - Delay:
+            time.sleep(0.9)
     
     
     # - ARMING:
@@ -92,7 +92,6 @@ while True:
     elif arm_state == 3:   
         # - Check for files ./media and upload them:
         functions.check_upload_files()
-
         # - Detect motion:
         i = 0
         while i < 7:
@@ -106,14 +105,12 @@ while True:
             # - Delay moved here in increments to increase responcivness:
             time.sleep(0.1)
             i = i + 1
-                
         # - Disarm if the button is pressed for 3 sec:
         arm_state = functions.read_button_and_change_state(arm_state, state_file)
+        if arm_state == 3:
+            # - Flash 3 times to indicate state is ARMED:
+            functions.flash_led(flashes=3)
 
-        # - Flash 3 times to indicate state is ARMED:
-        functions.flash_led(flashes=3)
-        
-        
         
     # - STATE is corrupted error:
     else:
