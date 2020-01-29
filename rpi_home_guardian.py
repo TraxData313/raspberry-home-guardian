@@ -46,7 +46,7 @@ except Exception as error_message:
     log_error(reporting_program_name, error_message)
     # - Revert to defaults:
     arming_time = 300
-    video_lenght = 5
+    video_lenght = 15
     # - Log event:
     event_message = 'Error handeled. Reverted parameters to defaults: arming_time = 300s, video_lenght = 5s'
     log_event(reporting_program_name, event_message)
